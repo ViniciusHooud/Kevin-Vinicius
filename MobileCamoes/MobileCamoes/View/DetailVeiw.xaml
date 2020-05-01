@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileCamoes.View.DetailVeiw"
+             Title="StartupMe" BackgroundColor="Black">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Favoritar" IconImageSource="{Binding SerieFavorite}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content >
+        <Frame HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+               Margin="15"
+               BackgroundColor="AliceBlue">
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" BackgroundColor="Azure">
+                        <Image WidthRequest="245" HeightRequest="450" BackgroundColor="Transparent" HorizontalOptions="Center" Source="{Binding Image}" />
+                        <StackLayout HorizontalOptions="FillAndExpand">
+                            <Label Text="{Binding Name}" Margin="0,10" FontAttributes="Bold" FontSize="20" BackgroundColor="AliceBlue" HorizontalOptions="CenterAndExpand"/>
+                            <Label Text="{Binding ReleaseDate}" FontSize="12" Opacity="0.6" BackgroundColor="AliceBlue" HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+                    
+                    <Label Text="{Binding Overview}" Margin="0,20,0,0" FontSize="Default"/>
+                    <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Margin="0,10">
+                        <Image Source="{Binding FirstStar}" Margin="10,0" />
+                        <Image Source="{Binding SecondStar}" Margin="10,0"/>
+                        <Image Source="{Binding ThridStar}" Margin="10,0"/>
+                        <Image Source="{Binding FourStar}" Margin="10,0"/>
+                        <Image Source="{Binding FiveStar}" Margin="10,0"/>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>
